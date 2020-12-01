@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Xunit;
 
-namespace AdventOfCode2020.Tests.Puzzles.Day1.Part1
+namespace AdventOfCode2020.Tests.Puzzles.Day01.Part01
 {
     public class Day1Part1Tests : PuzzleTestBase
     {
@@ -10,7 +10,7 @@ namespace AdventOfCode2020.Tests.Puzzles.Day1.Part1
         public async Task GivenInputWithValidNumbers_ReturnsCorrectSolution(int[] input, string expected)
         {
             var inputProvider = GetInputProvider(input);
-            var uut = new AdventOfCode2020.Puzzles.Day1.Part1.Puzzle(inputProvider);
+            var uut = new AdventOfCode2020.Puzzles.Day01.Part01.Puzzle(inputProvider);
             await uut.InitializeAsync();
 
             var actual = await uut.GetSolutionAsync();

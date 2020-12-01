@@ -8,8 +8,8 @@ namespace AdventOfCode2020.Puzzles
         {
             return (day, part) switch
             {
-                (1, 1) => new Day1.Part1.Puzzle(_fileInputProviderInt32),
-                (1, 2) => new Day1.Part2.Puzzle(_fileInputProviderInt32),
+                (1, 1) => new Day01.Part01.Puzzle(_fileInputProviderInt32),
+                (1, 2) => new Day01.Part02.Puzzle(_fileInputProviderInt32),
                 _      => null,
             };
         }

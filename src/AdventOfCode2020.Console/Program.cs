@@ -20,7 +20,7 @@ namespace AdventOfCode2020.ConsoleApp
             {
                 var input = Console.ReadLine();
 
-                if (input is null || input.Equals("exit", StringComparison.OrdinalIgnoreCase))
+                if (input is null or "" || input.Equals("exit", StringComparison.OrdinalIgnoreCase))
                 {
                     break;
                 }
