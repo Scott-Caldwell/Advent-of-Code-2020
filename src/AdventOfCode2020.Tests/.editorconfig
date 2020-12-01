@@ -1,0 +1,6 @@
+﻿# EditorConfig is awesome: http://EditorConfig.org
+
+[*.{cs,vb}]
+
+# Async methods don't need to be suffixed with Async
+dotnet_naming_rule.async_methods_should_be_suffixed.severity = none

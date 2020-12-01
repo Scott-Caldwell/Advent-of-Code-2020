@@ -4,4 +4,8 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AdventOfCode2020.Puzzles\AdventOfCode2020.Puzzles.csproj" />
+  </ItemGroup>
+
 </Project>
