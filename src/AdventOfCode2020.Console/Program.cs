@@ -14,11 +14,24 @@ namespace AdventOfCode2020.ConsoleApp
             var puzzleFactory = new PuzzleFactory();
 
             Console.WriteLine("Enter a day and part in day.part format (e.g. 1.2 for day one, part two).");
+            Console.WriteLine("Enter \"exit\" to exit.");
 
             while (true)
             {
-                var input = Console.ReadLine()!;
+                var input = Console.ReadLine();
+
+                if (input is null || input.Equals("exit", StringComparison.OrdinalIgnoreCase))
+                {
+                    break;
+                }
+
                 var split = input.Split('.', 2, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+                if (split.Length != 2)
+                {
+                    Console.WriteLine("{0} is not in a valid input format.", input);
+                    continue;
+                }
 
                 if (split[0] is var dayInput && !int.TryParse(dayInput, out var day))
                 {
