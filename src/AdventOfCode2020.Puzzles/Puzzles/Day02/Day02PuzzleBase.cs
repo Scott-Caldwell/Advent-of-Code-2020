@@ -1,15 +1,13 @@
-using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using AdventOfCode2020.InputProviders;
 
 namespace AdventOfCode2020.Puzzles.Day02
 {
-    public abstract class Day02PuzzleBase
+    public abstract class Day02PuzzleBase : PuzzleBase<PasswordData>
     {
-        protected Day02PuzzleBase(IInputProvider<PasswordData> inputProvider)
+        protected Day02PuzzleBase(IInputProvider<PasswordData> inputProvider) : base(inputProvider)
         {
-            _inputProvider = inputProvider;
         }
 
         protected async ValueTask InitializeAsync(string location)
@@ -25,8 +23,5 @@ namespace AdventOfCode2020.Puzzles.Day02
         }
 
         protected abstract bool IsValid(PasswordData input);
-
-        private readonly IInputProvider<PasswordData> _inputProvider;
-        protected ImmutableArray<PasswordData> _input;
     }
 }
