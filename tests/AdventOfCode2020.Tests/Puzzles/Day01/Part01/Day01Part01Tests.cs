@@ -3,7 +3,7 @@ using Xunit;
 
 namespace AdventOfCode2020.Tests.Puzzles.Day01.Part01
 {
-    public class Day1Part1Tests : PuzzleTestBase
+    public class Day01Part01Tests : PuzzleTestBase
     {
         [Theory]
         [InlineData(new[] { 1721, 979, 366, 299, 675, 1456 }, "514579")]

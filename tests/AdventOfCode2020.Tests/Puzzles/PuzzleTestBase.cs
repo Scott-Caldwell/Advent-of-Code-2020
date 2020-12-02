@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using System.Threading.Tasks;
 using AdventOfCode2020.InputProviders;
 
@@ -9,9 +12,17 @@ namespace AdventOfCode2020.Tests.Puzzles
         protected IInputProvider<T> GetInputProvider<T>(T[] input)
             => new TrivialInputProvider<T>(input);
 
+        protected IInputProvider<T> GetParsingInputProvider<T>(string[] input, Func<string, T> parse)
+            => new TrivialInputProvider<T>(input.Select(parse));
+
         private class TrivialInputProvider<T> : IInputProvider<T>
         {
             public TrivialInputProvider(T[] input)
+            {
+                _input = input.ToImmutableArray();
+            }
+
+            public TrivialInputProvider(IEnumerable<T> input)
             {
                 _input = input.ToImmutableArray();
             }

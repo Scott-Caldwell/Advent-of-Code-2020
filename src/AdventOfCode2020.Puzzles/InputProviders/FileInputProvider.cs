@@ -9,9 +9,9 @@ namespace AdventOfCode2020.InputProviders
 {
     public class FileInputProvider<T> : IInputProvider<T>
     {
-        public FileInputProvider(Func<string, T> converter)
+        public FileInputProvider(Func<string, T> parse)
         {
-            _converter = converter;
+            _parse = parse;
         }
 
         public async ValueTask<ImmutableArray<T>> GetInputAsync(string location)
@@ -20,10 +20,10 @@ namespace AdventOfCode2020.InputProviders
 
             return lines
                 .Where(x => !string.IsNullOrWhiteSpace(x))
-                .Select(_converter)
+                .Select(_parse)
                 .ToImmutableArray();
         }
 
-        private readonly Func<string, T> _converter;
+        private readonly Func<string, T> _parse;
     }
 }

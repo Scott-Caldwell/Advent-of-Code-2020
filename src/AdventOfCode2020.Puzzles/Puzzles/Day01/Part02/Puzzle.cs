@@ -14,7 +14,7 @@ namespace AdventOfCode2020.Puzzles.Day01.Part02
 
         public async ValueTask InitializeAsync()
         {
-            await InitializeAsync("Puzzles\\Day01\\Part02\\input");
+            await InitializeAsync("Puzzles\\Day01\\input");
         }
 
         public ValueTask<Solution> GetSolutionAsync()

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <None Update="Puzzles\Day01\Part01\input">
+    <None Update="Puzzles\Day01\input">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Puzzles\Day01\Part02\input">
+    <None Update="Puzzles\Day02\input">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
