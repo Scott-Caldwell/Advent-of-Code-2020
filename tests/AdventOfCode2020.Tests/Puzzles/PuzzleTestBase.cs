@@ -15,6 +15,9 @@ namespace AdventOfCode2020.Tests.Puzzles
         protected IInputProvider<T> GetParsingInputProvider<T>(string[] input, Func<string, T> parse)
             => new TrivialInputProvider<T>(input.Select(parse));
 
+        protected IInputProvider<string> GetStringSplitInputProvider(string input)
+            => new TrivialInputProvider<string>(input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+
         private class TrivialInputProvider<T> : IInputProvider<T>
         {
             public TrivialInputProvider(T[] input)
