@@ -3,6 +3,9 @@
     <None Update="Puzzles\Day01\input">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Puzzles\Day04\input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Puzzles\Day03\input">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

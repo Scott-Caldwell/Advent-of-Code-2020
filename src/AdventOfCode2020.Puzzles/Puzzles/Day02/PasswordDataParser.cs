@@ -32,7 +32,7 @@ namespace AdventOfCode2020.Puzzles.Day02
                 var currentChar = input[index];
                 var value = 0;
 
-                while (char.IsDigit(currentChar))
+                while (currentChar is >= '0' and <= '9')
                 {
                     value *= 10;
                     value += currentChar - '0';
